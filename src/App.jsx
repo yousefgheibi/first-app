@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/Navbar.jsx";
 function App() {
   return (
     <div className="App">
-        <Navbar />
+        <Navbar title="وبلاگ" />
         {/* <Footer /> */}
     </div>
   );

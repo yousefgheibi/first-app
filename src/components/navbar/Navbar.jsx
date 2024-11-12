@@ -1,13 +1,10 @@
 import styled from './navbar.module.css';
 
-function Navbar() {
-
-  let title ="وبلاگ"
-
+function Navbar(props) {
 
     return (
       <div className={styled.header}>
-        <h3>{title}</h3>
+        <h3>{props.title}</h3>
         <ul>
           <li>لیست مقالات</li>
           <li>ساخت مقاله</li>
