@@ -1,0 +1,21 @@
+.header{
+    box-shadow: 0 3px 5px #ccc;
+    padding: 4px 8px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header ul {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+    padding-right: 40px;
+}
+
+.header ul li{
+    list-style: none;
+    cursor: pointer;
+    margin-left: 16px;
+}

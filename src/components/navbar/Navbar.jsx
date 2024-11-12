@@ -1,7 +1,13 @@
+import styled from './navbar.module.css';
+
 function Navbar() {
     return (
-      <div>
-        <h1 style={{textAlign: 'center',backgroundColor: 'red'}}>header</h1>
+      <div className={styled.header}>
+        <ul>
+          <li>لیست مقالات</li>
+          <li>ساخت مقاله</li>
+          <li>درباره</li>
+        </ul>
       </div>
     )
   }
