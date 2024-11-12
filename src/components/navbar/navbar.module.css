@@ -4,15 +4,10 @@
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: end;
-    flex-direction: row-reverse;
-    padding: 0 40px;
 }
 
 .header ul {
     display: flex;
-    justify-content: end;
-    flex-direction: row-reverse;
     padding-right: 40px;
 }
 
