@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Article from "../../components/article/Article";
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 import styled from "./home.module.css";
 import axios from "axios";
 
@@ -34,6 +35,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
