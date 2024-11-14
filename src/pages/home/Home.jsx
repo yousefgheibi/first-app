@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import Article from "../../components/article/Article";
+import Spinner from "../../components/spinner/Spinner";
 import styled from "./home.module.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -26,7 +27,7 @@ function Home() {
                     <h2>مقالات جدید</h2>
                     {
                         isLoading ? (
-                            <p>چند لحظه صبر کنید....</p>
+                            <Spinner />
                         ) : (
                             <div className={styled.articles}>
                             {articles.map((article) => (
