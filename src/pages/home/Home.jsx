@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Article from "../../components/article/Article";
 import styled from "./home.module.css";
 import axios from "axios";
@@ -16,24 +16,26 @@ function Home() {
     }, []);
 
     return (
-        <div className="container">
-            <div className={styled.homeWrapper}>
-                <h2>مقالات جدید</h2>
-                <div className={styled.articles}>
-                    {articles.map((article) => (
-                        <Link to={`/article-details/${article.id}`}>
-                        <Article
-                            key={article.id}
-                            id={article.id}
-                            imageUrl={article.imageUrl}
-                            title={article.title}
-                            readingTime={article.readingTime}
-                            />
-                        </Link>
-                    ))}
+        <Fragment>
+            <div className="container">
+                <div className={styled.homeWrapper}>
+                    <h2>مقالات جدید</h2>
+                    <div className={styled.articles}>
+                        {articles.map((article) => (
+                            <Link to={`/article-details/${article.id}`}>
+                                <Article
+                                    key={article.id}
+                                    id={article.id}
+                                    imageUrl={article.imageUrl}
+                                    title={article.title}
+                                    readingTime={article.readingTime}
+                                />
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Fragment>
     );
 }
 
