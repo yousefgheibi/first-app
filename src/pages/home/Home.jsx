@@ -21,7 +21,7 @@ function Home() {
                 <h2>مقالات جدید</h2>
                 <div className={styled.articles}>
                     {articles.map((article) => (
-                        <Link to="/article-details">
+                        <Link to={`/article-details/${article.id}`}>
                         <Article
                             key={article.id}
                             id={article.id}
