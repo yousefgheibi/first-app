@@ -10,6 +10,7 @@ function Navbar(props) {
         <div className="container d-flex align-items-center">
           <h3>{props.title}</h3>
           <ul>
+          <li><Link to="/create-article">ساخت مقاله</Link></li>
             <li><Link to="/">لیست مقالات</Link></li>
             <li><Link to="/about-us">درباره ما</Link></li>
           </ul>

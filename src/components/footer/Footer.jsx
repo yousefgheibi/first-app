@@ -5,7 +5,7 @@ function Footer() {
   return (
     <Fragment>
       <div className={styled.footer}>
-        <h3>footer</h3>
+        <h3>فوتر سایت</h3>
       </div>
     </Fragment>
   )
