@@ -6,7 +6,7 @@ import axios from "axios";
 
 function ArticleDetails() {
 
-    const [article, setArticle] = useState();
+    const [article, setArticle] = useState([]);
     const params = useParams();
 
     useEffect(() => {
@@ -21,7 +21,6 @@ function ArticleDetails() {
         <Fragment>
             <div className="container">
                 <div class={styled.wrapper}>
-                    {article ? (
                         <div>
                             <h3>{article.title}</h3>
                             <div class={styled.summery}>
@@ -32,9 +31,7 @@ function ArticleDetails() {
                             <img src={article.imageUrl} alt={article.title} />
                             <p>{article.content}</p>
                         </div>
-                    ) : (
-                        <p>Loading...</p>
-                    )}
+                    }
                 </div>
             </div>
         </Fragment>
