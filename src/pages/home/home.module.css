@@ -12,3 +12,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.homeWrapper .articles a{
+    width: 24%;
+}

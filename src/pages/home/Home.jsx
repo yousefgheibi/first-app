@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Article from "../../components/article/Article";
 import styled from "./home.module.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
     const [articles, setArticles] = useState([]);
@@ -20,13 +21,15 @@ function Home() {
                 <h2>مقالات جدید</h2>
                 <div className={styled.articles}>
                     {articles.map((article) => (
+                        <Link to="/article-details">
                         <Article
                             key={article.id}
                             id={article.id}
                             imageUrl={article.imageUrl}
                             title={article.title}
                             readingTime={article.readingTime}
-                        />
+                            />
+                        </Link>
                     ))}
                 </div>
             </div>
