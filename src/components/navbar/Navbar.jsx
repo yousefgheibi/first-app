@@ -1,4 +1,5 @@
 import styled from './navbar.module.css';
+import { Link } from 'react-router-dom';
 
 function Navbar(props) {
 
@@ -7,9 +8,8 @@ function Navbar(props) {
       <div className="container d-flex align-items-center">
         <h3>{props.title}</h3>
         <ul>
-          <li>لیست مقالات</li>
-          <li>ساخت مقاله</li>
-          <li>درباره</li>
+          <li><Link to="/">لیست مقالات</Link></li>
+          <li><Link to="/about-us">درباره</Link></li>
         </ul>
       </div>
       </div>
