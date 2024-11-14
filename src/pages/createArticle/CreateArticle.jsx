@@ -5,27 +5,19 @@ function CreateArticle() {
 
     const [article, setArticle] = useState({
         title: "",
-        date: ""
+        date: "",
+        author:"",
+        readingTime:"",
+        content: ""
     });
 
     const handleChangeArticle = (event) => {
-        switch (event.target.name) {
-            case "title":
-                setArticle(prevState => (
-                    {
-                        ...prevState,
-                        title: event.target.value
-                    }
-                ))
-                break;
-            case "date":
-                setArticle(prevState => ({
-                    ...prevState,
-                    date: event.target.value
-                }
-                ))
-                break;
-        }
+        setArticle(prevState => (
+            {
+                ...prevState,
+                [event.target.name] : event.target.value
+            }
+        ))
     }
 
     console.log(article)
@@ -41,6 +33,19 @@ function CreateArticle() {
                     <div className={styled.inputWrapper}>
                         <label>تاریخ</label>
                         <input name="date" onChange={handleChangeArticle} dir="auto" type="text" />
+                    </div>
+                    <div className={styled.inputWrapper}>
+                        <label>نویسنده</label>
+                        <input name="author" onChange={handleChangeArticle} dir="auto" type="text" />
+                    </div>
+                    <div className={styled.inputWrapper}>
+                        <label>مدت زمان خواندن</label>
+                        <input name="readingTime" onChange={handleChangeArticle} dir="auto" type="text" />
+                    </div>
+
+                    <div className={styled.inputWrapper}>
+                        <label>متن</label>
+                        <textarea name="content" rows="8" onChange={handleChangeArticle} dir="auto"></textarea>
                     </div>
                 </div>
 

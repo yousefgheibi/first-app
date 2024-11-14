@@ -33,7 +33,7 @@ function ArticleDetails() {
                             <div>
                                 <h3>{article.title}</h3>
                                 <div class={styled.summery}>
-                                    <p>نویسنده : {article.writer}</p>
+                                    <p>نویسنده : {article.author}</p>
                                     <p>تاریخ ایجاد : {article.date}</p>
                                     <p>مدت زمان خواندن : {article.readingTime} دقیقه</p>
                                 </div>
