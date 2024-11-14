@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import Article from "../../components/article/Article";
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
 import styled from "./home.module.css";
 import axios from "axios";
 
@@ -17,25 +15,21 @@ function Home() {
     }, []);
 
     return (
-        <div>
-            <Navbar title="وبلاگ" />
-            <div className="container">
-                <div className={styled.homeWrapper}>
-                    <h2>مقالات جدید</h2>
-                    <div className={styled.articles}>
-                        {articles.map((article) => (
-                            <Article
-                                key={article.id}
-                                id={article.id}
-                                imageUrl={article.imageUrl}
-                                title={article.title}
-                                readingTime={article.readingTime}
-                            />
-                        ))}
-                    </div>
+        <div className="container">
+            <div className={styled.homeWrapper}>
+                <h2>مقالات جدید</h2>
+                <div className={styled.articles}>
+                    {articles.map((article) => (
+                        <Article
+                            key={article.id}
+                            id={article.id}
+                            imageUrl={article.imageUrl}
+                            title={article.title}
+                            readingTime={article.readingTime}
+                        />
+                    ))}
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
