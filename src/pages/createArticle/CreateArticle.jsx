@@ -1,26 +1,34 @@
 import { Fragment, useState } from "react";
 import styled from "./create-article.module.css";
+import axios from "axios";
 
 function CreateArticle() {
 
     const [article, setArticle] = useState({
         title: "",
         date: "",
-        author:"",
-        readingTime:"",
+        author: "",
+        readingTime: "",
         content: ""
     });
+
+
 
     const handleChangeArticle = (event) => {
         setArticle(prevState => (
             {
                 ...prevState,
-                [event.target.name] : event.target.value
+                [event.target.name]: event.target.value
             }
         ))
     }
 
-    console.log(article)
+
+    const handleCreateNewArticle = () =>{
+        axios.post("http://localhost:8000/articles", article)
+        console.log(article)
+    }
+
     return (
         <Fragment>
             <div className={styled.wrapper}>
@@ -47,6 +55,9 @@ function CreateArticle() {
                         <label>متن</label>
                         <textarea name="content" rows="8" onChange={handleChangeArticle} dir="auto"></textarea>
                     </div>
+                    <button className={styled.button} onClick={handleCreateNewArticle}>
+                        ارسال
+                    </button>
                 </div>
 
             </div>
