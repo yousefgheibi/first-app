@@ -7,18 +7,23 @@ function CreateArticle() {
         title: "",
         date: ""
     });
-   
+
     const handleChangeArticle = (event) => {
         switch (event.target.name) {
             case "title":
-                setArticle({
-                    title:event.target.value
-                })
+                setArticle(prevState => (
+                    {
+                        ...prevState,
+                        title: event.target.value
+                    }
+                ))
                 break;
             case "date":
-                setArticle({
-                    date:event.target.value
-                })
+                setArticle(prevState => ({
+                    ...prevState,
+                    date: event.target.value
+                }
+                ))
                 break;
         }
     }
