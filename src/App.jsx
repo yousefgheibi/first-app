@@ -12,6 +12,7 @@ function App() {
     <Fragment>
       <Navbar title="وبلاگ" />
       <Routes>
+        <Route path="*" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/article-details/:id" element={<ArticleDetails />} />
