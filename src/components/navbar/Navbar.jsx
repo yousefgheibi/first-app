@@ -9,7 +9,7 @@ function Navbar(props) {
         <h3>{props.title}</h3>
         <ul>
           <li><Link to="/">لیست مقالات</Link></li>
-          <li><Link to="/about-us">درباره</Link></li>
+          <li><Link to="/about-us">درباره ما</Link></li>
         </ul>
       </div>
       </div>
